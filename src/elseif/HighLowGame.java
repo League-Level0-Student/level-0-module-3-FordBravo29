@@ -14,24 +14,38 @@ public class HighLowGame {
 		int random = new Random().nextInt(100)+1;
 		
 		// 2. Print out the random variable above
-		syso
+		System.out.println(random);
 		// 11. Repeat steps 1 to 10 ten times
+		for (int i = 0; i < 10; i++) {
+			
 		
 			// 1. Ask the user for a guess using a pop-up window, and save their response 
-JOptionPane.showInputDialog("Guess a number from 1-100");
+		String OfficeCats= JOptionPane.showInputDialog("Guess a number from 1-100");
 		
 			// 4. Convert the users’ answer to an int (Integer.parseInt(string))
-			
+			int guess = Integer.parseInt(OfficeCats);
 			// 5. if the guess is correct
+			if(guess== random) {
+				JOptionPane.showMessageDialog(null, "You got it!");
+				System.exit(0);
+			}
 				// 6. Win
+			
 				// 12. Use "System.exit(0);" to quit the game if the user guessed the right answer.
 			// 7. if the guess is high
+			if(guess>random ) { JOptionPane.showMessageDialog(null, "TOO HIGH");
+				
+			}
 				// 8. Tell them it's too high
 			// 9. if the guess is low
+			if(guess<random) {
+				JOptionPane.showMessageDialog(null, "TOO LOW PEASANT");
+			}
 				// 10. Tell them it's too low
 
 		// 13. Tell them they lose
-		
+		}
+		JOptionPane.showMessageDialog(null, "YOU LOSE");
 	}
 
 }
